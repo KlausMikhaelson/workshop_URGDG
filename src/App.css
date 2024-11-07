@@ -1,38 +1,97 @@
-.App {
+.flex {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("https://pyxis.nymag.com/v1/imgs/c45/f1c/57e73c4fa6a055af7789e65f0c2f3fd17a-the-social-network.rsquare.w400.jpg");
+  background-size: cover;
+}
+
+a {
+  text-emphasis: none;
+  color: #000;
+}
+
+.img-cover {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+/* on hovering the image rotate it with a good speed */
+.img-cover:hover {
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bio {
+  max-width: 250px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  color: rgb(19, 149, 242);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header:hover {
+  color: rgb(0, 83, 142);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.link-btn {
+  background-color: sandybrown;
+  padding: 13px;
+  border-radius: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.gap {
+  margin: 10px;
+}
+
+.link-cover {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.scrollbar {
+  overflow-y: scroll;
+  max-height: 250px;
+  /* width: 100%; */
+}
+
+.paragraph {
   color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.social_url {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* scale the image on hover */
+
+.social_url:hover {
+  transform: scale(1.5);
 }
